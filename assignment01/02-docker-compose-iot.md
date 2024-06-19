@@ -8,6 +8,8 @@
 ## Error we found
 
     เจอ Premission Denied
+    และบางเครื่องมือยังไม่สามารถใช้ได้
+    
 
 ## How to solve the problems.
 
@@ -17,6 +19,8 @@
     sudo usermod -aG docker $USER
     newgrp docker
     docker run hello-world
+
+    และแก้เครื่องมือที่ยังใช้ไม่ได้โดยการไป Comment ใน docker.yml file!
 
 ## Output
 
