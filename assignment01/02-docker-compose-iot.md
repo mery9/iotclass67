@@ -7,19 +7,11 @@
 
 ## Error we found
 
-    เจอ Premission Denied
-    และบางเครื่องมือยังไม่สามารถใช้ได้
-    
+    Mongo DB Version is not usable in the gateway server 
 
 ## How to solve the problems.
 
-    Run Command ตามด้านล่างนี้
-
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
-    newgrp docker
-    docker run hello-world
-
+    ปรับแก้ Version ใน docker.yml file!
     และแก้เครื่องมือที่ยังใช้ไม่ได้โดยการไป Comment ใน docker.yml file!
 
 ## Output
