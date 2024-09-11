@@ -2,7 +2,8 @@
 
 ## Architecture Overview
 
-![IoT Event Streaming Architecture ![Untitled_page-0002](https://github.com/user-attachments/assets/5e1fdf78-4692-4a5e-b528-eb18bc5390b7)
+![IoT Event Streaming Architecture ![Untitled_page-0002](https://github.com/user-attachments/assets/12dbb944-cad2-4ed1-81fa-9fba0a8715c4)
+
 
 
 
