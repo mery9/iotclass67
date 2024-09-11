@@ -2,7 +2,7 @@
 
 ## Architecture Overview
 
-![IoT Event Streaming Architecture](![Uploading 2774742E-6FB4-4FE8-96AB-04B73A301B59.jpg…]()
+![IoT Event Streaming Architecture(![F351E2C8-6E5A-4243-A734-352C90589307](https://github.com/user-attachments/assets/78dbaf77-7d6b-48e5-b3a6-2d3049827f82)
 )
 
 ## Eclipse Mosquitto
