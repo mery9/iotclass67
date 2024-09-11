@@ -299,5 +299,5 @@ void loop(){
   Serial.println("");
 }
 ```
+![Flowchart](/resources/FlowIoT.jpg)
 
-![image description](/resources/FlowIoT.drawio.png)
