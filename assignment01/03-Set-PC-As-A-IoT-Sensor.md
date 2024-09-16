@@ -8,6 +8,7 @@ To install Apache Maven, follow the steps below:
 
 ## 2. Fix `pom.xml` File
 
+- https://github.com/hanattaw/iot_event_streaming_architecture/tree/mac-port
 - Switch from the `ubuntu22` branch in Git to the `macport` branch.
 - Copy all the files from the `macport` branch and replace them in the `u22` branch.
 
