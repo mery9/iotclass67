@@ -2,6 +2,8 @@
 - Eclip MQTT
 
 ## MQTT Topic and Payload
+```cpp
+
 Topic: iot-frames
 Payload:
   JsonObject payload = jsonDoc.createNestedObject("payload");
@@ -9,7 +11,8 @@ Payload:
   payload["humidity"] = humid;
   payload["pressure"] = pressure;
   payload["luminosity"] = analogval;
-  
+```
+
 ## ESP32
 
 ```cpp
@@ -299,6 +302,5 @@ void loop(){
   Serial.println("");
 }
 ```
-![FlowIoT drawio](https://github.com/user-attachments/assets/0e93048f-c8e8-4d5c-a902-312cda5495f1)
-
+![Flowchart](/resources/FlowIoT.jpg)
 
