@@ -10,7 +10,7 @@
 - [ ] Kafka Rest Proxy
 - [X] [Spring Boot 2.3.3 / Apache Maven 3.6.3.]()
 - [X] [Spring Boot Starter Actuator.]()
-- [X] [Micrometer Registry Prometheus.]()
+- [ ] [Micrometer Registry Prometheus.]()
 - [ ] lombok.
 - [ ] Jackson.
 - [X] [NodeExporter (Exporter for machine metrics).](/assignment07/01-visualization.md#วิธีการทำ-node-exporter)
