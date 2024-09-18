@@ -2,7 +2,9 @@
 
 
 ## start-service #0
-
+```
+docker compose up zookeeper kafka
+```
 start service ในหน้าจอ service_0 มี zookeeper และ kafka
 โดยเราต้องรอให้ทั้ง 2 ตัวนี้ Run ให้เรียบร้อยก่อนที่จะไป Step ต่อไป เพื่อให้เราไม่มีปัญหาในตอนข้อมูลขึ้น
 โดยให้รออย่างน้อย 5 นาที หรือ จน terminal นั้นมีความนิ่ง
