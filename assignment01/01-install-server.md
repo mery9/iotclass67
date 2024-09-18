@@ -25,9 +25,9 @@ https://docs.docker.com/engine/install/ubuntu/
 สามารถทำตามเว็บ Offical ได้เลย
 
 - * - * - * - Start of Ubuntu install Command - * - * - * -
-    
-    for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
-    
+```
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+``` 
 
 # Add Docker's official GPG key:
 
