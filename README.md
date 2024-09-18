@@ -5,7 +5,7 @@ Internet of things Class 2567
 
 - [ ] Main technologies of architectures [assignment00](/assignment00/architecture.md)
 - [ ] Setting up servers and components. [assignment01](/assignment01)
-- [ ] Compose services. 
+- [ ] Compose services. [assignment01](/assignment01/02-docker-compose-iot.md)
 - [ ] Ingest and store real-time data from IoT sensors. [assignment03](/assignment03/01-ingest.md), [assignment04](/assignment04/01-iot-sensor.md)
 - [ ] Analyze and make aggregations. [assignment05](/assignment05/01-analyze.md)
 - [ ] Store data. [assignment06](/assignment06/01-storedata.md)
