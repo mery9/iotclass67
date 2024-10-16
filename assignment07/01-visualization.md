@@ -89,7 +89,7 @@ docker compose restart grafana
 
 4. เซ็ตภาพที่ต้องการ ใน Draw.io โดยใช้คำาสั่ง Edit Diagram
 
-- import ไฟล์ .csv (สามารถนำไฟล์ ภาพ เข้าในโปรแกรม Draw.io แล้ว export ออกมาเป็นไฟล์ .csv ได้)
+- import ไฟล์ .svg (สามารถนำไฟล์ ภาพ เข้าในโปรแกรม Draw.io แล้ว export ออกมาเป็นไฟล์ .svg ได้)
 
 ![Step4_1](https://github.com/user-attachments/assets/e1662b6c-9495-4675-aaa9-a2079a8e87fd)
 
