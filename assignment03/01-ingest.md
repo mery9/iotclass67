@@ -1,6 +1,5 @@
 # Ingest and store real-time data from IoT sensors
 
-
 IoT sensors ส่งข้อมูลด้วย MQTT protocol. 
 - **Mosquitto (MQTT Broker)**: The MQTT broker (Mosquitto) receives sensor data and publishes it to specified topics.
 - **Kafka Connect MQTT Source**: Kafka Connect pulls data from the MQTT broker and sends it to the Kafka cluster for processing. This integration ensures that raw sensor data is continuously streamed into Kafka topics.
