@@ -5,27 +5,31 @@
 ![IoT Event Streaming Architecture ![image](https://github.com/user-attachments/assets/e0574075-9b00-4868-a49f-54fb8b1b50b0)
 
 
-
-
-
 ## Eclipse Mosquitto
 
-Open Source สำหรับการจัดการ Message (Message Broker) ที่ใช้งาน MQTT Protocol สามารถใช้งานได้บนคอมพิวเตอร์ขนาดเล็กจนถึงเครื่อง Server
-MQTT Protocol เป็น Protocol สำหรับการใช้ส่ง Message ระหว่างอุปกรณ์แบบ Asynchronous (Pub/Sub Model) เหมาะสำหรับการใช้งานบนระบบ IoT ที่ประกอบด้วย Low Power Sensor และ Mobile Device ในระบบ
+Open Source สำหรับการจัดการ Message (Message Broker) ที่ใช้งาน MQTT Protocol โดย Mosquitto มีขนาดที่เล็กและใช้พลังงานน้อย ทำให้สามารถใช้งานได้บนบอร์ด Embedded System ขนาดเล็ก, คอมพิวเตอร์ขนาดต่างๆ จนถึงเครื่อง Server
+MQTT Protocol (Message Queuing Telemetry Transport) เป็น Protocol สำหรับการใช้ส่ง Message ระหว่างอุปกรณ์ (Machine to Machine) แบบ Asynchronous (Pub/Sub Model) เหมาะสำหรับการใช้งานบนระบบ IoT ที่ประกอบด้วย Low Power Sensor และ Mobile Device ในระบบ โดยในการส่ง Message ของ MQTT จะทำการส่งผ่านเครือข่าย TCP/IP ทำให้สามารถเชื่อม Device ต่างๆ เข้าด้วยกันได้ผ่านระบบ Internet ความแตกต่างของ MQTT และ HTTP คือ MQTT ถูกออกแบบมาให้ใช้งานบนอุปกรณืขนาดเล็กทำให้มี Bandwidth ต่ำกว่า HTTP
 
 
 ## Apache ZooKeeper
 
-ระบบ Central Service สำหรับการกำหนดค่าต่างๆ ระหว่าง Service ในกลุ่มเดียวกัน เพื่อลดความซับซ้อนในการใช้งานขณะที่ทำการ Deploy application ช่วยให้การจัดการระบบกระจายเป็นไปอย่างมีประสิทธิภาพ
+ระบบ Central Service สำหรับการกำหนดค่าต่างๆ ระหว่าง Service ในกลุ่มเดียวกัน เพื่อลดความซับซ้อนในการใช้งานขณะที่ทำการ Deploy application ช่วยให้การจัดการระบบกระจายเป็นไปอย่างมีประสิทธิภาพ โดยตัวอย่างหน้าที่ของ Zookeeeper มีดังนี้
+- การจัดการ Broker และตรวจสอบสถานะของ Broker
+- Topic reccording และ Topic partition
+- Update Kafka
+- Topic Authorization
+- และอื่นๆ
 
 ## Apache Kafka
 
-Apache Kafka เป็น Platform สำหรับการใช้ส่ง, เก็บ, ดำเนินการ และติดตาม data stream จากหลายแหล่งที่มาเหมาะสำหรับการสร้าง data pipeline ที่มีประสิทธิภาพสูงและการวิเคราะห์ข้อมูลแบบ Real Timeโดยมีข้อดีคือความสามารถในการจัดการข้อมูลปริมาณมากและมีความยืดหยุ่นสูง
+Apache Kafka เป็น Platform สำหรับการใช้ส่ง, เก็บ, ดำเนินการ และติดตาม Data stream จากหลายแหล่งที่มาเหมาะสำหรับการสร้าง data pipeline ที่มีประสิทธิภาพสูงและการวิเคราะห์ข้อมูลแบบ Real Time โดยมีข้อดีคือความสามารถในการจัดการข้อมูลปริมาณมากและมีความยืดหยุ่นสูง 
+Apache Kafka ถูกใช้เป็นตัวกลางสำหรับการเชื่อมต่อ เพื่อช่วยแยกกการสื่อสารระหว่างระบบแต่ละตัว 
 
 
 ## Apache Kafka Connect
 
-เป็น Framework ในการเชื่อมต่อเครือข่ายในระบบเข้ากับเรือข่ายภายนอก เช่น Database หรือ File Systems โดยจะเน้นที่ Streaming Data ที่ส่งไปที่ Kafka และมาจาก Kafka เพื่อการเขียน Connector Plugin ที่มีประสิทธิภาพ
+เป็น Framework ในการเชื่อมต่อเครือข่ายในระบบเข้ากับเรือข่ายภายนอก เช่น Database หรือ File Systems ด้วยการใช้งาน Kafka เป็นตัวกลางในการรับส่ง Data โดยจะเน้นที่ Streaming Data ในการใช้งาน Kafka connect จะต้องมีการสร้าง Connecter ได้แก่ Source connecter สำหรับรับ/อ่านข้อมูล และ Sink Connecter สำหรับส่ง/เขียนข้อมูล เพื่อให้สามารถระบุต้นทางและปลายทางได้
+
 
 ## Apache Kafka Streams
 
