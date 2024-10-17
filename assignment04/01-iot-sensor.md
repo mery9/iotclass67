@@ -4,6 +4,14 @@
 ## MQTT Broker
  ใช้งาน Mosquitto ในการทำหน้าที่ MQTT Broker เพื่อรับข้อมูล MQTT message จากด้านของ Client ด้วย Topic ชื่อ iot-frame ไปที่ Kafka
 
+## MQTT Password
+ การรักษาความปลอดภัยในการเชื่อมต่อกับ MQTT Broker สามารถทำได้ด้วยการกำหนด username และ password สำหรับการเชื่อมต่อ MQTT ซึ่งจะช่วยป้องกันไม่ให้บุคคลภายนอกสามารถเชื่อมต่อหรือส่งข้อมูลมายัง Broker ได้ โดยในตัวอย่างการเชื่อมต่อของ ESP32 ได้กำหนดค่า mqtt_user และ mqtt_password เอาไว้ดังนี้:
+
+```cpp
+const char* mqtt_user = "iot-frames-x";
+const char* mqtt_password = "1234";
+```
+
 ## MQTT Topic and Payload
 ```cpp
 
