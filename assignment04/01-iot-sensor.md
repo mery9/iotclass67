@@ -1,5 +1,8 @@
 # Ingest and store real-time data from IoT sensors.
-- Eclip MQTT
+
+# Software
+## MQTT Broker
+ ใช้งาน Mosquitto ในการทำหน้าที่ MQTT Broker เพื่อรับข้อมูล MQTT message จากด้านของ Client ด้วย Topic ชื่อ iot-frame ไปที่ Kafka
 
 ## MQTT Topic and Payload
 ```cpp
@@ -14,6 +17,32 @@ Payload:
 ```
 
 ## ESP32
+
+### รายละเอียด
+#### Board: ESP32 cucumber RS
+- Board setup
+การ Setup board จะทำผ่าน Arduino IDE โดยใช้ Setting เป็น ESP32s2 Dev module
+- Sensors บน Board และ Sensor ที่ติดตั้ง
+BMP280: Pressure
+MPU6050: Movement
+HTS221: Temperature, Humidity
+LDR: Luminosity 
+
+#### MQTT Message 
+- Import libery สำหรับ MQTT broker และ Pub/Sub Client
+- เชื่อมต่อ Board กับ WiFi และ เชื่อมต่อ MQTT Broker
+- ส่ง Payload ด้วย JSON
+
+#### Board status setup
+- LED สีน้ำเงิน: Sensor status
+- LED สีแดง: WiFi ไม่ได้
+- LED สีม่วงกระพริบ: เชื่อมต่อ WiFi ได้
+- LED สีเขียวกระพริบ: เชื่อมต่อ MQTT ไม่ได้
+- LED สีเขียว: เชื่อมต่อ MQTT ได้
+- LED สีเหลือกระพริบ: แสดงสถานะ Board (Alive)
+ 
+#### Timestamp
+- ใช้ Librar ESPNtpClient.h เพื่อนำ NTP มาทำการ Synchronize Timestamp และส่งไปที่ Kafka จาก NTP server
 
 ```cpp
 /// LIB import
